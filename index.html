@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>NIOSA Volunteers</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="description" content="NIOSA Volunteer">
+    <meta name="author" content="XFloyd.NET Internet Business Solutions">
+
+    <link href='https://fonts.googleapis.com/css?family=RobotoDraft:300,400,400italic,500,700' rel='stylesheet'
+          type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700' rel='stylesheet'
+          type='text/css'>
+
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/js/media.match.min.js"></script>
+    <script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/js/placeholder.min.js"></script>
+    <![endif]-->
+    <link type="text/css" href="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/fonts/font-awesome/css/font-awesome.min.css"
+          rel="stylesheet">
+    <!-- Font Awesome -->
+    <link type="text/css" href="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/css/styles.css" rel="stylesheet">
+    <!-- Core CSS with all styles -->
+    <link type="text/css" href="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/codeprettifier/prettify.css" rel="stylesheet">
+    <!-- Code Prettifier -->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries. Placeholdr.js enables the placeholder attribute -->
+    <!--[if lt IE 9]>
+    <link type="text/css" href="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/css/ie8.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.1.0/respond.min.js"></script>
+    <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <style>
+        body.layout-boxed {
+            background-image: url("/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/img/bg-1.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+
+    <!-- The following CSS are included as plugins and can be removed if unused-->
+    <link href="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/css/editor.bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/css/dataTables.bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/css/buttons.dataTables.min.css" rel="stylesheet" media="screen">
+    <link href="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/css/select.dataTables.min.css" rel="stylesheet" media="screen">
+    <link href="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/form-select2/css/select2.min.css" rel="stylesheet" media="screen">
+    <link href="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/form-daterangepicker/daterangepicker.css" rel="stylesheet" media="screen">
+    <style>
+        tr.group {
+            background-color: #9fe9ff !important;
+        }
+        tr.group:hover {
+            background-color: #9adef5 !important;
+        }
+        tr.group td {
+            border-top: 2pt solid black !important;
+            border-bottom: 1pt dashed grey !important;
+        }
+        td.details-control {
+            position: relative;
+            cursor: pointer;
+            text-align: left !important;
+        }
+        td.details-control::before {
+            content: "\f146";
+            font-family: FontAwesome;
+            font-size: 15px;
+            margin-right: 15px;
+            margin-left: 10px;
+        }
+        tr.details td.details-control {
+            position: relative;
+        }
+        tr.details td.details-control::before {
+            content: "\f0fe";
+            font-family: FontAwesome;
+            font-size: 15px;
+        }
+        table.dataTable tbody > tr.selected, table.dataTable tbody > tr > .selected {
+            background-color: #FFA621;
+        }
+        @-webkit-keyframes orangefade {
+            from {
+                background: orange;
+            }
+            to {
+                background: transparent;
+            }
+        }
+        @-moz-keyframes orangefade {
+            from {
+                background: orange;
+            }
+            to {
+                background: transparent;
+            }
+        }
+        .item-highlight {
+            -webkit-animation: orangefade 2s;
+            -moz-animation: orangefade 2s;
+            animation: orangefade 2s;
+        }
+        table.dataTable td.select-checkbox::before {
+            margin-top: -10px !important;
+        }
+        table.dataTable tr.selected td.select-checkbox::after {
+            margin-top: -15px !important;
+        }
+        .table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+            padding: 3px;
+        }
+    </style>
+
+</head>
+
+<body class="infobar-overlay">
+<header id="topnav" class="navbar navbar-midnightblue navbar-fixed-top clearfix" role="banner">
+
+	<span id="trigger-sidebar" class="toolbar-trigger toolbar-icon-bg">
+		<a data-toggle="tooltips" data-placement="right" title="Toggle Sidebar"><span class="icon-bg"><i class="fa fa-fw fa-bars"></i></span></a>
+	</span>
+
+    <div class="yamm navbar-left navbar-collapse collapse in">
+        <ul class="nav navbar-nav">
+            <li><a href="/sites/projects/niosavolunteers.org/httpdocs/web/app_dev.php/register">Register <span class="label label-alizarin">New!</span></a></li>
+            <li><a href="/sites/projects/niosavolunteers.org/httpdocs/web/app_dev.php/login">Login</a></li>
+        </ul>
+    </div>
+
+    <ul class="nav navbar-nav toolbar pull-right">
+        <li class="dropdown toolbar-icon-bg">
+            <a href="#" id="navbar-links-toggle" data-toggle="collapse" data-target="header>.navbar-collapse">
+				<span class="icon-bg">
+					<i class="fa fa-fw fa-ellipsis-h"></i>
+				</span>
+            </a>
+        </li>
+
+        <li class="toolbar-icon-bg hidden-xs" id="trigger-fullscreen">
+            <a href="#" class="toggle-fullscreen"><span class="icon-bg"><i class="fa fa-fw fa-arrows-alt"></i></span></a>
+        </li>
+    </ul>
+
+</header>
+<div id="wrapper">
+    <div id="layout-static">
+        <div class="static-content-wrapper">
+            <div class="static-content">
+                <div class="page-content">
+                    <div class="page-heading">
+                        <h1>Manage Roles</h1>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="panel-ctrls"></div>
+                            </div>
+                            <div class="panel-body panel-no-padding">
+                                <table id="datatable_testing_datatables" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%"></table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="panel-ctrls"></div>
+                            </div>
+                            <div class="panel-body panel-no-padding">
+                                <table id="datatable_testing_datatables_2" class="table table-striped table-bordered table-hover" cellspacing="0" width="100%"></table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Load site level scripts -->
+
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script> -->
+
+<script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/js/jquery-1.10.2.min.js"></script> 							<!-- Load jQuery -->
+<script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/js/jqueryui-1.9.2.min.js"></script> 							<!-- Load jQueryUI -->
+
+<script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/js/bootstrap.min.js"></script> 								<!-- Load Bootstrap -->
+
+<script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/codeprettifier/prettify.js"></script> 				<!-- Code Prettifier  -->
+<script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/bootstrap-switch/bootstrap-switch.js"></script> 		<!-- Swith/Toggle Button -->
+
+<script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/bootstrap-tabdrop/js/bootstrap-tabdrop.js"></script>  <!-- Bootstrap Tabdrop -->
+
+<script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/js/enquire.min.js"></script> 									<!-- Enquire for Responsiveness -->
+
+<script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/nanoScroller/js/jquery.nanoscroller.min.js"></script> <!-- nano scroller -->
+
+<script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/jquery-mousewheel/jquery.mousewheel.min.js"></script> 	<!-- Mousewheel support needed for jScrollPane -->
+
+<script type="text/javascript" src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/js/application.js"></script>
+
+<!-- End loading site level scripts -->
+<!-- Load page level scripts-->
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/form-select2/js/select2.full.min.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/js/jquery.dataTables.min.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/js/dataTables.editor.min.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/js/dataTables.bootstrap.min.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/js/editor.bootstrap.min.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/js/dataTables.keyTable.min.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/js/dataTables.buttons.min.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/js/dataTables.select.min.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/js/editor.bootstrapDate.min.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/js/editor.bootstrapDateTime.min.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/DataTables/media/js/editor.select2.js"></script>
+
+<script src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script src="/sites/projects/niosavolunteers.org/httpdocs/web/bundles/assets/plugins/form-daterangepicker/daterangepicker.js"></script>
+<script>
+
+    $(document).ready(function() {
+
+        var xyz = false;
+
+        // Todo field type plug-in code
+        (function ($, DataTable) {
+
+            if ( ! DataTable.ext.editorFields ) {
+                DataTable.ext.editorFields = {};
+            }
+
+            var Editor = DataTable.Editor;
+            var _fieldTypes = DataTable.ext.editorFields;
+
+            _fieldTypes.todo = {
+                create: function ( conf ) {
+                    var that = this;
+
+                    conf._enabled = true;
+
+                    // Create the elements to use for the input
+                    conf._input = $(
+                            '<div id="'+Editor.safeId( conf.id )+'">'+
+                            '<button class="btn" value="0">To do</button>'+
+                            '<button class="btn" value="1">Done</button>'+
+                            '</div>');
+
+                    // Use the fact that we are called in the Editor instance's scope to call
+                    // the API method for setting the value when needed
+                    $('button.btn', conf._input).click( function () {
+                        if ( conf._enabled ) {
+                            that.set( conf.name, $(this).attr('value') );
+                        }
+
+                        return false;
+                    } );
+
+                    return conf._input;
+                },
+
+                get: function ( conf ) {
+                    return $('button.btn-success', conf._input).attr('value');
+                },
+
+                set: function ( conf, val ) {
+                    $('button.btn-success', conf._input).removeClass( 'btn-success' );
+                    $('button.btn[value='+val+']', conf._input).addClass('btn-success');
+                },
+
+                enable: function ( conf ) {
+                    conf._enabled = true;
+                    $(conf._input).removeClass( 'disabled' );
+                },
+
+                disable: function ( conf ) {
+                    conf._enabled = false;
+                    $(conf._input).addClass( 'disabled' );
+                }
+            };
+
+        })(jQuery, jQuery.fn.dataTable);
+
+        //daterangepicker
+        (function( $, DataTable ) {
+            'use strict';
+
+
+            if ( ! DataTable.ext.editorFields ) {
+                DataTable.ext.editorFields = {};
+            }
+
+            var _fieldTypes = DataTable.Editor ?
+                    DataTable.Editor.fieldTypes :
+                    DataTable.ext.editorFields;
+
+            _fieldTypes.daterangepicker = {
+                create: function ( conf ) {
+
+                    conf._input = $('<input/>')
+                            .attr( $.extend( {
+                                id: conf.id,
+                                type: 'text'
+                            }, conf.attr || {} ) )
+                            .daterangepicker( conf.opts || {} );
+
+                    return conf._input[0];
+                },
+
+                get: function ( conf ) {
+                    $(conf._input).data('daterangepicker').elementChanged(); //Update dates of the picker from input
+                    return conf._input.val();
+                },
+
+                set: function ( conf, val ) {
+                    conf._input.val( val );
+                }
+
+            };
+
+        })(jQuery, jQuery.fn.dataTable);
+
+        /////////////testing_datatables////////////////
+        var editor8;
+        var table8;
+        var cell_exception8 = ':not(:first-child):not(:nth-child(2))';
+        var ajax_url8 = {
+            type: "post",
+            url: "/sites/projects/niosavolunteers.org/httpdocs/web/app_dev.php/testing_datatables_ajax",
+            data: function (d) {
+                d.ajax_form_token = "vAHJWC1jkHO5rQAtU09WJCrKzr_ARWasVmuznBtsR5g";
+            }
+        };
+
+        editor8 = new $.fn.dataTable.Editor({
+            ajax: ajax_url8,
+            table: "#datatable_testing_datatables",
+            fields: [{
+                label: "daterangepicker:",
+                name: "daterangepicker_filed",
+                type: "daterangepicker"
+            },{
+                label: "Role Code:",
+                name: "role_id"
+            },{
+                label: "Role Name:",
+                name: "role_name"
+            },{
+                label: "Date:",
+                name: "ds_date",
+                type: "date",
+                opts: {
+                    showOn: 'focus',
+                    format: 'mm/dd/yyyy'
+                }
+            },{
+                label: "BS DateTime:",
+                name: "registered_date",
+                type: "datetime",
+                opts: {
+                    format: 'd M yy H:ii p'
+                }
+            },{
+                label: "Priority:",
+                name: "priority",
+                type: "select2",
+                opts: {
+                    data: [{
+                        "text": "Optgroup 1",
+                        "children": [{
+                            "id": "1",
+                            "text": "Item One"
+                        }, {
+                            "id": "2",
+                            "text": "Item Two"
+                        }]
+                    },{
+                        "text": "Optgroup 2",
+                        "children": [{
+                            "id": "3",
+                            "text": "Item 3"
+                        }, {
+                            "id": "4",
+                            "text": "Item 4"
+                        }]
+                    }]
+                }
+            },{
+                label: "Status:",
+                name: "done",
+                type: "todo", // Using the custom field type
+                def: 0
+            }]
+        }).on( 'onInitEdit', function () {
+            editor8.disable(['priority']);
+        }).on( 'onInitCreate', function () {
+            editor8.enable(['priority']);
+        });
+
+        $('input', editor8.node()).on('focus', function () {
+            this.select();
+        });
+
+        table8 = $('#datatable_testing_datatables').DataTable( {
+            dom: "Brtflpi",
+            "language": {
+                "lengthMenu": "_MENU_",
+                "sSearch": ""
+            },
+            pageLength: 100,
+            processing: true,
+            ajax: ajax_url8,
+            scrollY: "300px",
+            scrollCollapse: true,
+            columns: [
+                {
+                    data: null,
+                    defaultContent: '',
+                    className: 'select-checkbox',
+                    width: "25px",
+                    orderable: false
+                },
+                //{ "title": "ID", "data": "id", width: "50px" },
+                { "title": "Daterangepicker", "data": "daterangepicker_filed"},
+                { "title": "Role Code", "data": "role_id", "visible": false },
+                { "title": "Role Name", "data": "role_name" },
+                { "title": "BS Date", "data": "ds_date" },
+                { "title": "BS DateTime", "data": "registered_date" },
+                { "title": "Select2 Priority", "data": "priority_name", "editField": "priority" },
+                {
+                    title: "Status",
+                    className: "center",
+                    data: "done",
+                    render: function (data, type, row) {
+                        if ( type === 'display' || type === 'filter' ) {
+                            // Filtering and display get the rendered string
+                            return data == 0 ? "To do" : "Done";
+                        }
+                        // Otherwise just give the original data
+                        return data;
+                    }
+                }
+            ],
+            orderFixed: [ 2, 'asc' ],
+            order: [ 1, 'asc' ],
+            keys: {
+                columns: cell_exception8,
+                keys: [9]
+            },
+            select: {
+                style: 'multi',
+                selector: 'td:first-child'
+            },
+            buttons: [
+                { text: 'Move Selected >>', action: function () {
+                    table9.rows.add( table8.rows( { selected: true } ).data() ).draw().nodes()
+                            .to$().addClass('item-highlight');
+                    table8.rows( { selected: true } ).remove().draw();
+                    setTimeout(function() {
+                        $('.item-highlight').removeClass('item-highlight');
+                    }, 1000);
+                    console.log(table8.table().node().id);
+                }},
+                { text: 'Collaps All', action: function () {
+                    $("#datatable_testing_datatables tr.group:not('.details')>td.details-control").click();
+                }},
+                { text: 'Expend All', action: function () {
+                    $("#datatable_testing_datatables tr.details>td.details-control").click();
+                }},
+                'selectAll',
+                'selectNone',
+                { extend: "create", editor: editor8,
+                    formButtons: [
+                        {
+                            label: 'Save',
+                            fn: function () {
+                                this.submit();
+                            },
+                            className: "btn-primary"
+                        },
+                        {
+                            label: 'Cancel',
+                            fn: function () {
+                                this.close();
+                            },
+                            className: "cancel"
+                        }
+                    ] },
+                { extend: "edit",   editor: editor8 },
+                { extend: "remove", editor: editor8,
+                    formButtons: [
+                        {
+                            label: 'Delete',
+                            fn: function () {
+                                this.submit();
+                            },
+                            className: "btn-primary"
+                        }
+                    ]
+                }
+            ],
+            drawCallback: function ( settings ) {
+                var api = this.api();
+                var rows = api.rows( {page:'current'} ).nodes();
+                var last = null;
+
+                api.column(2, {page:'current'} ).data().each( function ( group, i ) {
+                    if ( last !== group ) {
+                        $(rows).eq( i ).before(
+                                '<tr class="group" id="' + i + '"><td colspan="8" class="details-control">'+ group +'</td></tr>'
+                        );
+                        last = group;
+                    }
+                } );
+            }
+        });
+
+        //table8.order.fixed({}).draw(); //remove fixed order
+
+        table8.on('key-focus', function (e, datatable, cell) {
+            editor8.inline(cell.index(), {
+                onBlur: 'submit'
+            });
+        }).on('click', 'td' + cell_exception8, function (e) { //this fixes focus on enter
+            editor8.inline(this);
+        }).on('click', 'tr td.details-control', function () {
+            var tr = $(this).closest('tr');
+
+            var selected_group = $(tr).nextUntil(".group");
+            if (tr.next('tr').is(":visible")) {
+                selected_group.hide();
+                tr.addClass('details');
+            } else {
+                selected_group.show();
+                tr.removeClass('details');
+            }
+        });
+
+        table9 = $('#datatable_testing_datatables_2').DataTable( {
+            dom: "Brtflpi",
+            "language": {
+                "lengthMenu": "_MENU_",
+                "sSearch": ""
+            },
+            pageLength: 100,
+            processing: true,
+            ajax: ajax_url8,
+            scrollY: "300px",
+            scrollCollapse: true,
+            columns: [
+                {
+                    data: null,
+                    defaultContent: '',
+                    className: 'select-checkbox',
+                    width: "25px",
+                    orderable: false
+                },
+                //{ "title": "ID", "data": "id", width: "50px" },
+                { "title": "Daterangepicker", "data": "daterangepicker_filed"},
+                { "title": "Role Code", "data": "role_id", "visible": false },
+                { "title": "Role Name", "data": "role_name" },
+                { "title": "BS Date", "data": "ds_date" },
+                { "title": "BS DateTime", "data": "registered_date" },
+                { "title": "Select2 Priority", "data": "priority_name", "editField": "priority" },
+                {
+                    title: "Status",
+                    className: "center",
+                    data: "done",
+                    render: function (data, type, row) {
+                        if ( type === 'display' || type === 'filter' ) {
+                            // Filtering and display get the rendered string
+                            return data == 0 ? "To do" : "Done";
+                        }
+                        // Otherwise just give the original data
+                        return data;
+                    }
+                }
+            ],
+            orderFixed: [ 2, 'asc' ],
+            order: [ 1, 'asc' ],
+            keys: {
+                columns: cell_exception8,
+                keys: [9]
+            },
+            select: {
+                style: 'multi',
+                selector: 'td:first-child'
+            },
+            buttons: [
+                { text: '<< Move Selected', action: function () {
+                    alert('Ajax to send changes to server');
+                    table8.rows.add( table9.rows( { selected: true } ).data() ).draw().nodes()
+                            .to$().addClass('item-highlight');
+                    table9.rows( { selected: true } ).remove().draw();
+
+                    setTimeout(function() {
+                        $('.item-highlight').removeClass('item-highlight');
+                    }, 5000);
+                    console.log(table9.table().node().id);
+                }},
+                { text: 'Collaps All', action: function () {
+                    $("#datatable_testing_datatables_2 tr.group:not('.details')>td.details-control").click();
+                }},
+                { text: 'Expend All', action: function () {
+                    $("#datatable_testing_datatables_2 tr.details>td.details-control").click();
+                }},
+                'selectAll',
+                'selectNone'
+            ],
+            drawCallback: function ( settings ) {
+                var api = this.api();
+                var rows = api.rows( {page:'current'} ).nodes();
+                var last = null;
+
+                api.column(2, {page:'current'} ).data().each( function ( group, i ) {
+                    if ( last !== group ) {
+                        $(rows).eq( i ).before(
+                                '<tr class="group" id="' + i + '"><td colspan="8" class="details-control">'+ group +'</td></tr>'
+                        );
+                        last = group;
+                    }
+                } );
+            }
+        }).on('click', 'tr td.details-control', function () {
+            var tr = $(this).closest('tr');
+            var selected_group = $(tr).nextUntil(".group");
+            if (tr.next('tr').is(":visible")) {
+                selected_group.hide();
+                tr.addClass('details');
+            } else {
+                selected_group.show();
+                tr.removeClass('details');
+            }
+        });
+
+        $('.dataTables_filter input').attr('placeholder','Search...');
+
+        /*
+         //add icons
+         $(".buttons-create").prepend('<i class="fa fa-plus"/> ');
+         $(".buttons-remove").prepend('<i class="fa fa-times-circle"/> ');
+
+         //DOM Manipulation to move datatable elements integrate to panel
+         $('.panel-ctrls').append($('.dataTables_filter').addClass("pull-right")).find("label").addClass("panel-ctrls-center");
+         $('.panel-ctrls').append('<i class="separator pull-right"></i>');
+         $('.panel-ctrls').append($('.dataTables_length').addClass("pull-right")).find("label").addClass("panel-ctrls-center");
+         $('.panel-ctrls').append('<i class="separator pull-right"></i>');
+         $('.panel-ctrls').append($('.dt-button').addClass("panel-ctrls-center"));
+
+         $('.dataTables_paginate').addClass("pull-right m5");
+         $('.dataTables_info').addClass("m5");
+         */
+        /////////////testing_datatables////////////////
+
+
+    });
+</script>
+<!-- End loading page level scripts-->
+
+
+<div id="sfwdtd63ab1" class="sf-toolbar" style="display: none"></div><script>/*<![CDATA[*/        Sfjs = (function() {        "use strict";        var classListIsSupported = 'classList' in document.documentElement;        if (classListIsSupported) {            var hasClass = function (el, cssClass) { return el.classList.contains(cssClass); };            var removeClass = function(el, cssClass) { el.classList.remove(cssClass); };            var addClass = function(el, cssClass) { el.classList.add(cssClass); };            var toggleClass = function(el, cssClass) { el.classList.toggle(cssClass); };        } else {            var hasClass = function (el, cssClass) { return el.className.match(new RegExp('\\b' + cssClass + '\\b')); };            var removeClass = function(el, cssClass) { el.className = el.className.replace(new RegExp('\\b' + cssClass + '\\b'), ' '); };            var addClass = function(el, cssClass) { if (!hasClass(el, cssClass)) { el.className += " " + cssClass; } };            var toggleClass = function(el, cssClass) { hasClass(el, cssClass) ? removeClass(el, cssClass) : addClass(el, cssClass); };        }        var noop = function() {},            collectionToArray = function (collection) {                var length = collection.length || 0,                    results = new Array(length);                while (length--) {                    results[length] = collection[length];                }                return results;            },            profilerStorageKey = 'sf2/profiler/',            request = function(url, onSuccess, onError, payload, options) {                var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject('Microsoft.XMLHTTP');                options = options || {};                options.maxTries = options.maxTries || 0;                xhr.open(options.method || 'GET', url, true);                xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');                xhr.onreadystatechange = function(state) {                    if (4 !== xhr.readyState) {                        return null;                    }                    if (xhr.status == 404 && options.maxTries > 1) {                        setTimeout(function(){                            options.maxTries--;                            request(url, onSuccess, onError, payload, options);                        }, 500);                        return null;                    }                    if (200 === xhr.status) {                        (onSuccess || noop)(xhr);                    } else {                        (onError || noop)(xhr);                    }                };                xhr.send(payload || '');            },            getPreference = function(name) {                if (!window.localStorage) {                    return null;                }                return localStorage.getItem(profilerStorageKey + name);            },            setPreference = function(name, value) {                if (!window.localStorage) {                    return null;                }                localStorage.setItem(profilerStorageKey + name, value);            },            requestStack = [],            renderAjaxRequests = function() {                var requestCounter = document.querySelectorAll('.sf-toolbar-ajax-requests');                if (!requestCounter.length) {                    return;                }                var ajaxToolbarPanel = document.querySelector('.sf-toolbar-block-ajax');                var tbodies = document.querySelectorAll('.sf-toolbar-ajax-request-list');                var state = 'ok';                if (tbodies.length) {                    var tbody = tbodies[0];                    var rows = document.createDocumentFragment();                    if (requestStack.length) {                        for (var i = 0; i < requestStack.length; i++) {                            var request = requestStack[i];                            var row = document.createElement('tr');                            rows.appendChild(row);                            var methodCell = document.createElement('td');                            if (request.error) {                                methodCell.className = 'sf-ajax-request-error';                            }                            methodCell.textContent = request.method;                            row.appendChild(methodCell);                            var pathCell = document.createElement('td');                            pathCell.className = 'sf-ajax-request-url';                            if ('GET' === request.method) {                                var pathLink = document.createElement('a');                                pathLink.setAttribute('href', request.url);                                pathLink.textContent = request.url;                                pathCell.appendChild(pathLink);                            } else {                                pathCell.textContent = request.url;                            }                            pathCell.setAttribute('title', request.url);                            row.appendChild(pathCell);                            var durationCell = document.createElement('td');                            durationCell.className = 'sf-ajax-request-duration';                            if (request.duration) {                                durationCell.textContent = request.duration + "ms";                            } else {                                durationCell.textContent = '-';                            }                            row.appendChild(durationCell);                            row.appendChild(document.createTextNode(' '));                            var profilerCell = document.createElement('td');                            if (request.profilerUrl) {                                var profilerLink = document.createElement('a');                                profilerLink.setAttribute('href', request.profilerUrl);                                profilerLink.textContent = request.profile;                                profilerCell.appendChild(profilerLink);                            } else {                                profilerCell.textContent = 'n/a';                            }                            row.appendChild(profilerCell);                            var requestState = 'ok';                            if (request.error) {                                requestState = 'error';                                if (state != "loading" && i > requestStack.length - 4) {                                    state = 'error';                                }                            } else if (request.loading) {                                requestState = 'loading';                                state = 'loading';                            }                            row.className = 'sf-ajax-request sf-ajax-request-' + requestState;                        }                        var infoSpan = document.querySelectorAll(".sf-toolbar-ajax-info")[0];                        var children = collectionToArray(tbody.children);                        for (var i = 0; i < children.length; i++) {                            tbody.removeChild(children[i]);                        }                        tbody.appendChild(rows);                        if (infoSpan) {                            var text = requestStack.length + ' AJAX request' + (requestStack.length > 1 ? 's' : '');                            infoSpan.textContent = text;                        }                        ajaxToolbarPanel.style.display = 'block';                    } else {                        ajaxToolbarPanel.style.display = 'none';                    }                }                requestCounter[0].textContent = requestStack.length;                var className = 'sf-toolbar-ajax-requests sf-toolbar-value';                requestCounter[0].className = className;                if (state == 'ok') {                    Sfjs.removeClass(ajaxToolbarPanel, 'sf-ajax-request-loading');                    Sfjs.removeClass(ajaxToolbarPanel, 'sf-toolbar-status-red');                } else if (state == 'error') {                    Sfjs.addClass(ajaxToolbarPanel, 'sf-toolbar-status-red');                    Sfjs.removeClass(ajaxToolbarPanel, 'sf-ajax-request-loading');                } else {                    Sfjs.addClass(ajaxToolbarPanel, 'sf-ajax-request-loading');                }            };        var addEventListener;        var el = document.createElement('div');        if (!'addEventListener' in el) {            addEventListener = function (element, eventName, callback) {                element.attachEvent('on' + eventName, callback);            };        } else {            addEventListener = function (element, eventName, callback) {                element.addEventListener(eventName, callback, false);            };        }                    if (window.XMLHttpRequest && XMLHttpRequest.prototype.addEventListener) {                var proxied = XMLHttpRequest.prototype.open;                XMLHttpRequest.prototype.open = function(method, url, async, user, pass) {                    var self = this;                    /* prevent logging AJAX calls to static and inline files, like templates */                    var path = url;                    if (url.substr(0, 1) === '/') {                        if (0 === url.indexOf('\x2Fsites\x2Fprojects\x2Fniosavolunteers.org\x2Fhttpdocs\x2Fweb')) {                            path = url.substr(48);                        }                    }                    else if (0 === url.indexOf('http\x3A\x2F\x2Fubuntu\x2Fsites\x2Fprojects\x2Fniosavolunteers.org\x2Fhttpdocs\x2Fweb')) {                        path = url.substr(61);                    }                    if (path.substr(0, 1) === '/' && !path.match(new RegExp("^\/(app(_[\\w]+)?\\.php\/)?_wdt"))) {                        var stackElement = {                            loading: true,                            error: false,                            url: url,                            method: method,                            start: new Date()                        };                        requestStack.push(stackElement);                        this.addEventListener('readystatechange', function() {                            if (self.readyState == 4) {                                stackElement.duration = new Date() - stackElement.start;                                stackElement.loading = false;                                stackElement.error = self.status < 200 || self.status >= 400;                                stackElement.profile = self.getResponseHeader("X-Debug-Token");                                stackElement.profilerUrl = self.getResponseHeader("X-Debug-Token-Link");                                Sfjs.renderAjaxRequests();                            }                        }, false);                        Sfjs.renderAjaxRequests();                    }                    proxied.apply(this, Array.prototype.slice.call(arguments));                };            }                return {            hasClass: hasClass,            removeClass: removeClass,            addClass: addClass,            toggleClass: toggleClass,            getPreference: getPreference,            setPreference: setPreference,            addEventListener: addEventListener,            request: request,            renderAjaxRequests: renderAjaxRequests,            load: function(selector, url, onSuccess, onError, options) {                var el = document.getElementById(selector);                if (el && el.getAttribute('data-sfurl') !== url) {                    request(                        url,                        function(xhr) {                            el.innerHTML = xhr.responseText;                            el.setAttribute('data-sfurl', url);                            removeClass(el, 'loading');                            (onSuccess || noop)(xhr, el);                        },                        function(xhr) { (onError || noop)(xhr, el); },                        '',                        options                    );                }                return this;            },            toggle: function(selector, elOn, elOff) {                var tmp = elOn.style.display,                    el = document.getElementById(selector);                elOn.style.display = elOff.style.display;                elOff.style.display = tmp;                if (el) {                    el.style.display = 'none' === tmp ? 'none' : 'block';                }                return this;            },            createTabs: function() {                var tabGroups = document.querySelectorAll('.sf-tabs');                /* create the tab navigation for each group of tabs */                for (var i = 0; i < tabGroups.length; i++) {                    var tabs = tabGroups[i].querySelectorAll('.tab');                    var tabNavigation = document.createElement('ul');                    tabNavigation.className = 'tab-navigation';                    for (var j = 0; j < tabs.length; j++) {                        var tabId = 'tab-' + i + '-' + j;                        var tabTitle = tabs[j].querySelector('.tab-title').innerHTML;                        var tabNavigationItem = document.createElement('li');                        tabNavigationItem.setAttribute('data-tab-id', tabId);                        if (j == 0) { Sfjs.addClass(tabNavigationItem, 'active'); }                        if (Sfjs.hasClass(tabs[j], 'disabled')) { Sfjs.addClass(tabNavigationItem, 'disabled'); }                        tabNavigationItem.innerHTML = tabTitle;                        tabNavigation.appendChild(tabNavigationItem);                        var tabContent = tabs[j].querySelector('.tab-content');                        tabContent.parentElement.setAttribute('id', tabId);                    }                    tabGroups[i].insertBefore(tabNavigation, tabGroups[i].firstChild);                }                /* display the active tab and add the 'click' event listeners */                for (i = 0; i < tabGroups.length; i++) {                    tabNavigation = tabGroups[i].querySelectorAll('.tab-navigation li');                    for (j = 0; j < tabNavigation.length; j++) {                        tabId = tabNavigation[j].getAttribute('data-tab-id');                        document.getElementById(tabId).querySelector('.tab-title').className = 'hidden';                        if (Sfjs.hasClass(tabNavigation[j], 'active')) {                            document.getElementById(tabId).className = 'block';                        } else {                            document.getElementById(tabId).className = 'hidden';                        }                        tabNavigation[j].addEventListener('click', function(e) {                            var activeTab = e.target || e.srcElement;                            /* needed because when the tab contains HTML contents, user can click */                            /* on any of those elements instead of their parent '<li>' element */                            while (activeTab.tagName.toLowerCase() !== 'li') {                                activeTab = activeTab.parentNode;                            }                            /* get the full list of tabs through the parent of the active tab element */                            var tabNavigation = activeTab.parentNode.children;                            for (var k = 0; k < tabNavigation.length; k++) {                                var tabId = tabNavigation[k].getAttribute('data-tab-id');                                document.getElementById(tabId).className = 'hidden';                                Sfjs.removeClass(tabNavigation[k], 'active');                            }                            Sfjs.addClass(activeTab, 'active');                            var activeTabId = activeTab.getAttribute('data-tab-id');                            document.getElementById(activeTabId).className = 'block';                        });                    }                }            },            createToggles: function() {                var toggles = document.querySelectorAll('.sf-toggle');                for (var i = 0; i < toggles.length; i++) {                    var elementSelector = toggles[i].getAttribute('data-toggle-selector');                    var element = document.querySelector(elementSelector);                    Sfjs.addClass(element, 'sf-toggle-content');                    if (toggles[i].hasAttribute('data-toggle-initial') && toggles[i].getAttribute('data-toggle-initial') == 'display') {                        Sfjs.addClass(element, 'sf-toggle-visible');                    } else {                        Sfjs.addClass(element, 'sf-toggle-hidden');                    }                    Sfjs.addEventListener(toggles[i], 'click', function(e) {                        e.preventDefault();                        var toggle = e.target || e.srcElement;                        /* needed because when the toggle contains HTML contents, user can click */                        /* on any of those elements instead of their parent '.sf-toggle' element */                        while (!Sfjs.hasClass(toggle, 'sf-toggle')) {                            toggle = toggle.parentNode;                        }                        var element = document.querySelector(toggle.getAttribute('data-toggle-selector'));                        Sfjs.toggleClass(element, 'sf-toggle-hidden');                        Sfjs.toggleClass(element, 'sf-toggle-visible');                        /* the toggle doesn't change its contents when clicking on it */                        if (!toggle.hasAttribute('data-toggle-alt-content')) {                            return;                        }                        if (!toggle.hasAttribute('data-toggle-original-content')) {                            toggle.setAttribute('data-toggle-original-content', toggle.innerHTML);                        }                        var currentContent = toggle.innerHTML;                        var originalContent = toggle.getAttribute('data-toggle-original-content');                        var altContent = toggle.getAttribute('data-toggle-alt-content');                        toggle.innerHTML = currentContent !== altContent ? altContent : originalContent;                    });                }            }        };    })();    Sfjs.addEventListener(window, 'load', function() {        Sfjs.createTabs();        Sfjs.createToggles();    });/*]]>*/</script><script>/*<![CDATA[*/    (function () {                Sfjs.load(            'sfwdtd63ab1',            '/sites/projects/niosavolunteers.org/httpdocs/web/app_dev.php/_wdt/d63ab1',            function(xhr, el) {                el.style.display = -1 !== xhr.responseText.indexOf('sf-toolbarreset') ? 'block' : 'none';                if (el.style.display == 'none') {                    return;                }                if (Sfjs.getPreference('toolbar/displayState') == 'none') {                    document.getElementById('sfToolbarMainContent-d63ab1').style.display = 'none';                    document.getElementById('sfToolbarClearer-d63ab1').style.display = 'none';                    document.getElementById('sfMiniToolbar-d63ab1').style.display = 'block';                } else {                    document.getElementById('sfToolbarMainContent-d63ab1').style.display = 'block';                    document.getElementById('sfToolbarClearer-d63ab1').style.display = 'block';                    document.getElementById('sfMiniToolbar-d63ab1').style.display = 'none';                }                Sfjs.renderAjaxRequests();                /* Handle toolbar-info position */                var toolbarBlocks = document.querySelectorAll('.sf-toolbar-block');                for (var i = 0; i < toolbarBlocks.length; i += 1) {                    toolbarBlocks[i].onmouseover = function () {                        var toolbarInfo = this.querySelectorAll('.sf-toolbar-info')[0];                        var pageWidth = document.body.clientWidth;                        var elementWidth = toolbarInfo.offsetWidth;                        var leftValue = (elementWidth + this.offsetLeft) - pageWidth;                        var rightValue = (elementWidth + (pageWidth - this.offsetLeft)) - pageWidth;                        /* Reset right and left value, useful on window resize */                        toolbarInfo.style.right = '';                        toolbarInfo.style.left = '';                        if (elementWidth > pageWidth) {                            toolbarInfo.style.left = 0;                        }                        else if (leftValue > 0 && rightValue > 0) {                            toolbarInfo.style.right = (rightValue * -1) + 'px';                        } else if (leftValue < 0) {                            toolbarInfo.style.left = 0;                        } else {                            toolbarInfo.style.right = '0px';                        }                    };                }            },            function(xhr) {                if (xhr.status !== 0) {                    confirm('An error occurred while loading the web debug toolbar (' + xhr.status + ': ' + xhr.statusText + ').\n\nDo you want to open the profiler?') && (window.location = '/sites/projects/niosavolunteers.org/httpdocs/web/app_dev.php/_profiler/d63ab1');                }            },            {'maxTries': 5}        );    })();/*]]>*/</script>
+</body>
+</html>
